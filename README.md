@@ -1,3 +1,4 @@
+![](https://jitpack.io/v/Oclemy/Infinity.svg)
 # Infinity
 A reliable but simple to use recyclerview infinite pagination library. Add infinite pagination with as few as three lines of code
 
@@ -35,7 +36,7 @@ allprojects {
 Then in your app-level build.gradle add this library as a dependency:
 ```groovy
   	   dependencies {
-	        implementation 'com.github.Oclemy:Infinity:Tag'
+	        implementation 'com.github.Oclemy:Infinity:1.0.0'
 	     }
 ```
 Now sync.
