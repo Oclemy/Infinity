@@ -26,3 +26,40 @@ allprojects {
  }
 }
 ```
+
+Then in your app-level build.gradle add this library as a dependency:
+```groovy
+  	   dependencies {
+	        implementation 'com.github.Oclemy:Infinity:Tag'
+	     }
+```
+Now sync.
+
+## Usage
+
+Using this library is as simple as it gets. First reference you recyclerview and set it's layout manager:
+```kotlin
+var rv: RecyclerView = findViewById(R.id.rv)
+rv.layoutManager = GridLayoutManager(this, 2)
+```
+Now call the `setup()`:
+
+```kotlin
+        Infinity().setup(rv, object : OnLoadMoreListener {
+            override fun onLoadMore() {
+                //download(pageToFetch)
+                //pageToFetch++
+            }
+        })
+```
+
+That's it. There is an easy to understand example in the sample project under the app folder.
+
+## Contact
+
+1. Name: Clement Ochieng
+2. Email: oclemmi@gmail.com
+3. Websites: https://camposha.info, https://android.camposha.info, https//:flutter.camposha.info
+4. Channel: ProgrammingWizards TV
+
+Good day.
