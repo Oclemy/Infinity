@@ -36,6 +36,9 @@ open class GalleryActivity : AppCompatActivity() {
         return (start..end).map { "https://picsum.photos/1000/700?image=$it" }
     }
 
+    /**
+     * Let's simulate a download operation
+     */
     fun simulateDownload(pb: ProgressBar, data: List<String>): MutableLiveData<List<String>> {
         pb.visibility = View.VISIBLE
         val timer = Timer()
@@ -48,12 +51,18 @@ open class GalleryActivity : AppCompatActivity() {
         return mLiveData
     }
 
+    /**
+     * Setup the adapter. Pass a layoutmanager to recyclerview before setting up Infinity
+     */
     private fun setupAdapter() {
         rv.layoutManager = GridLayoutManager(this, 2)
         adapter = ImageAdapter(data, ::goToDetails)
         rv.adapter = adapter
     }
 
+    /**
+     * Setup our infinity library
+     */
     private fun setupInfinity() {
         Infinity().setup(rv, object : OnLoadMoreListener {
             override fun onLoadMore() {
