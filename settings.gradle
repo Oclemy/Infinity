@@ -1,0 +1,3 @@
+include ':InfinityRecyclerView'
+include ':app'
+rootProject.name = "Infinity"
