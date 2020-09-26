@@ -15,6 +15,11 @@ In almost all my projects involving making API requests or accessing firebase da
 1. AndroidX
 2. Kotlin
 
+## Demo Project
+Find this demo in the project:
+
+![Infinity RecyclerView](infinity_demo.gif)
+
 ## Installation
 The library is hosted in jitpack. So to install it, first go to your root-level build.gradle and specify jitpack as a repository:
 
